@@ -12,7 +12,7 @@ O wcrs é um clone simplificado do comando `wc` do Linux, desenvolvido em Rust. 
 pub fn linhas(texto: &str) -> usize {
     texto.lines().count()
 }
-```
+``` 
 - **Função**: Conta o número de linhas em um texto
 - **Método usado**: `lines()` divide o texto em linhas e `count()` conta os elementos
 - **Comportamento**: Cada quebra de linha (`\n`) incrementa o contador
