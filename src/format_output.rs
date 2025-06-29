@@ -1,8 +1,31 @@
-pub fn format_output(lines: Option<usize>, words: Option<usize>, bytes: Option<usize>, file_name: Option<&str>) -> String {
-    let line_str = lines.map_or(String::new(), |v| format!("{:>8}", v));
-    let word_str = words.map_or(String::new(), |v| format!("{:>8}", v));
-    let byte_str = bytes.map_or(String::new(), |v| format!("{:>8}", v));
-    let name_str = file_name.unwrap_or("");
+pub fn formatar_saida(
+    linhas: Option<usize>,
+    palavras: Option<usize>,
+    bytes: Option<usize>,
+    caracteres: Option<usize>,
+    arquivo: &str,
+) -> String {
+    let mut partes = Vec::new();
 
-    format!("{}{}{} {}", line_str, word_str, byte_str, name_str)
+    if let Some(l) = linhas {
+        partes.push(format!("Linhas: {}", l));
+    }
+    if let Some(p) = palavras {
+        partes.push(format!("Palavras: {}", p));
+    }
+    if let Some(b) = bytes {
+        partes.push(format!("Bytes: {}", b));
+    }
+    if let Some(c) = caracteres {
+        partes.push(format!("Caracteres: {}", c));
+    }
+
+    let mut resultado = partes.join(" | ");
+    
+    if !arquivo.is_empty() {
+        resultado.push_str(" | Arquivo: ");
+        resultado.push_str(arquivo);
+    }
+
+    resultado
 }

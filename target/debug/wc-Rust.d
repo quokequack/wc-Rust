@@ -1,1 +1,1 @@
-C:\Users\dezza\Desktop\rust\wc-Rust\target\debug\wc-Rust.exe: C:\Users\dezza\Desktop\rust\wc-Rust\src\format_output.rs C:\Users\dezza\Desktop\rust\wc-Rust\src\main.rs
+/Users/malui/Downloads/pasta\ sem\ título/wc-Rust/target/debug/wc-Rust: /Users/malui/Downloads/pasta\ sem\ título/wc-Rust/src/count.rs /Users/malui/Downloads/pasta\ sem\ título/wc-Rust/src/format_output.rs /Users/malui/Downloads/pasta\ sem\ título/wc-Rust/src/main.rs

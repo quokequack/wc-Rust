@@ -1,0 +1,1 @@
+/Users/malui/Downloads/pasta\ sem\ título/wc-Rust/target/release/wc-Rust: /Users/malui/Downloads/pasta\ sem\ título/wc-Rust/src/count.rs /Users/malui/Downloads/pasta\ sem\ título/wc-Rust/src/format_output.rs /Users/malui/Downloads/pasta\ sem\ título/wc-Rust/src/main.rs
