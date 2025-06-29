@@ -194,22 +194,19 @@ let conteudo = if let Some(arquivo) = app.get_one::<String>("arquivo") {
 2. **Clone o repositório** (se aplicável):
    ```bash
    git clone [URL_DO_REPOSITÓRIO]
-   cd wcrs
+   cd wc-Rust
    ```
 
 ### Compilação
 ```bash
-# Compilar em modo debug (para desenvolvimento)
 cargo build
-
-# Compilar em modo release (para uso final)
 cargo build --release
 ```
 
 ### Execução Básica
 O executável será gerado em:
-- Modo debug: `target/debug/wcrs`
-- Modo release: `target/release/wcrs`
+- Modo debug: `target/debug/wc-Rust`
+- Modo release: `target/release/wc-Rust`
 
 #### Opção 1: Executar diretamente com Cargo
 ```bash
@@ -224,37 +221,14 @@ cargo run -- -c                       # Apenas caracteres (lê do stdin)
 
 #### Opção 2: Executar o binário compilado
 ```bash
-# Primeiro compile
 cargo build --release
 
-# Depois execute
-./target/release/wcrs [OPÇÕES] [ARQUIVO]
-```
-
-### Modos de Uso
-
-#### 1. Ler de um arquivo
-```bash
-wcrs [OPÇÕES] arquivo.txt
-```
-Exemplo:
-```bash
-wcrs -l -c documento.md  # Mostra apenas contagem de linhas e caracteres
-```
-
-#### 2. Ler da entrada padrão (stdin)
-```bash
-comando | wcrs [OPÇÕES]
-```
-Exemplos:
-```bash
-echo "Olá mundo" | wcrs -w       # Conta palavras da string
-cat arquivo.txt | wcrs -l -b     # Conta linhas e bytes
+./target/release/wc-Rust [OPÇÕES] [ARQUIVO]
 ```
 
 #### 3. Comportamento padrão (sem flags)
 ```bash
-wcrs arquivo.txt
+cargo run -- arquivo.txt
 ```
 Mostra (nesta ordem):
 1. Número de linhas
@@ -265,10 +239,10 @@ Mostra (nesta ordem):
 ### Flags Disponíveis
 | Flag | Descrição                     | Exemplo de Uso       |
 |------|-------------------------------|----------------------|
-| `-l` | Conta linhas                  | `wcrs -l arquivo`    |
-| `-w` | Conta palavras                | `wcrs -w arquivo`    |
-| `-b` | Conta bytes                   | `wcrs -b arquivo`    |
-| `-c` | Conta caracteres (Unicode)    | `wcrs -c arquivo`    |
+| `-l` | Conta linhas                  | `cargo run -- -l arquivo`    |
+| `-w` | Conta palavras                | `cargo run -- -w arquivo`    |
+| `-b` | Conta bytes                   | `cargo run -- -b arquivo`    |
+| `-c` | Conta caracteres (Unicode)    | `cargo run -- -c arquivo`    |
 
 ### Exemplos Completos
 
@@ -292,26 +266,8 @@ Mostra (nesta ordem):
 
 4. **Mostrar apenas caracteres Unicode**:
    ```bash
-   cargo run -- -c exemplo_unicode.txt
+   cargo run -- -c exemplo.txt
    # Saída: Caracteres: 1420 | Arquivo: exemplo_unicode.txt
-   ```
-
-### Dicas Rápidas
-1. Para ajuda:
-   ```bash
-   cargo run -- --help
-   ```
-
-2. Para testar com dados imediatos:
-   ```bash
-   echo "Teste rápido" | cargo run -- -w
-   ```
-
-3. Para compilar e instalar globalmente:
-   ```bash
-   cargo install --path .
-   # Depois pode usar diretamente:
-   wcrs [OPÇÕES] [ARQUIVO]
    ```
 
 ## Dependências
