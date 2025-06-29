@@ -2,7 +2,7 @@
 
 Disciplina: Linguagem de Programação<br/>
 Professor: Ivo Calado<br/>
-Alunas: Andrezza Abreu, Maria Luísa Alaquoke e Maryane dos Santos<br/>
+Alunas: Andrezza Abreu, Maria Luísa Alaquoke e Maryane Santos<br/>
 
 ## Visão Geral
 O wcrs é um clone simplificado do comando `wc` do Linux, desenvolvido em Rust. Ele conta linhas, palavras, bytes e caracteres de arquivos ou entrada padrão, com saída formatada.
