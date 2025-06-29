@@ -1,8 +1,8 @@
 # Documentação do Projeto wcrs (Clone do wc em Rust)
 
-## Disciplina: Linguagem de Programação
-## Professor: Ivo Calado
-## Alunas: Andrezza Abreu, Maria Luísa Alaquoke e Maryane dos Santos
+### Disciplina: Linguagem de Programação
+### Professor: Ivo Calado
+### Alunas: Andrezza Abreu, Maria Luísa Alaquoke e Maryane dos Santos
 
 ## Visão Geral
 O wcrs é um clone simplificado do comando `wc` do Linux, desenvolvido em Rust. Ele conta linhas, palavras, bytes e caracteres de arquivos ou entrada padrão, com saída formatada.
