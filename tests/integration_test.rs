@@ -8,5 +8,5 @@ fn test_wc_output_lines() {
         .expect("Falha ao executar");
 
     let stdout = String::from_utf8(output.stdout).unwrap();
-    assert!(stdout.contains("       3 test1.txt")); // Exemplo de teste esperado
+    assert!(stdout.contains("       3 test1.txt")); 
 }
