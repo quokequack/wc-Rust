@@ -31,13 +31,18 @@ fn main() {
         count::caracteres(&conteudo),
     );
 
-    let mostrar = (
-        if app.get_flag("linhas") || !app.args_present() { Some(total_linhas) } else { None },
-        if app.get_flag("palavras") || !app.args_present() { Some(total_palavras) } else { None },
-        if app.get_flag("bytes") || !app.args_present() { Some(total_bytes) } else { None },
-        if app.get_flag("caracteres") { Some(total_caracteres) } else { None },
-    );
+let nenhuma_flag = 
+    !app.get_flag("linhas") &&
+    !app.get_flag("palavras") &&
+    !app.get_flag("bytes") &&
+    !app.get_flag("caracteres");
 
+let mostrar = (
+    if app.get_flag("linhas") || nenhuma_flag { Some(total_linhas) } else { None },
+    if app.get_flag("palavras") || nenhuma_flag { Some(total_palavras) } else { None },
+    if app.get_flag("bytes") || nenhuma_flag { Some(total_bytes) } else { None },
+    if app.get_flag("caracteres") { Some(total_caracteres) } else { None },
+);
     let nome_arquivo = app.get_one::<String>("arquivo").map(|s| s.as_str()).unwrap_or("");
     
     println!("{}", format_output::formatar_saida(
