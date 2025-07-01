@@ -197,7 +197,7 @@ let conteudo = if let Some(arquivo) = app.get_one::<String>("arquivo") {
 
 2. **Clone o repositório** (se aplicável):
    ```bash
-   git clone [URL_DO_REPOSITÓRIO]
+   git clone https://github.com/quokequack/wcrs
    cd wc-Rust
    ```
 
